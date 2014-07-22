@@ -317,26 +317,105 @@ body{
 
 }
 
-
 #containerregister{
     width: 960px;
     background-color: #fff;
     position: relative;
     background size: cover;
     margin: auto;
-    height: 1200px;
+    height: 990px;
     outline: 1px red solid;
 }
 
-#registerfooter p{
-    font-style: verdana;
-    color: #362819;
+#registerfooter{
+   /* font-style: verdana;
+    color: #362819;*/
     font-weight: normal;
     font-size: 13px;
     float: left;
-    margin-left: 10px;
-  /*  outline: 1px red solid;*/
-    margin-top: 30px;
+    clear: both;
+    margin: 520px 0 0 10px;
+}
+
+#form{
+    width: 960px;
+    margin-top: 150px;
+   /* background-color: #fdf5ef;*/
+}
+
+.registerform{
+    width: 800px;
+    margin: auto;
+    clear: both;
+}
+
+#form .registerform h3{
+    width: 100px;
+    display: block;
+    text-align: left;
+    padding-bottom:5px;
+   /* border-bottom: 1px solid #575036;*/
+/*    margin:0px auto 40px auto;*/
+    margin-bottom: 10px;
+    font-family: verdana;
+    color: #d3af8e;
+    font-size: 14px;
+    border-bottom: 1px solid #696969;
+
+
+}
+
+.forminput{
+    width: 250px;
+    margin:10px;
+    color: #000;
+    display:block;
+}
+
+.registerform .formlabel {
+    width:100px;
+    float:left;
+    text-align:right;
+}
+
+.registerform .formlabel{
+    padding-right: 20px;
+}
+
+/*.registerform:after {
+    content:"";
+    display: block;
+    clear:both;
+}
+*/
+.registerform form input[type="submit"]{
+    float: left;
+    margin-left: 350px;
+    margin-top: 10px;
+}
+
+#form form input[type="submit"]{
+    color: #696969;
+    display:block;
+    width: 90px;
+}
+
+.registerform form input[type="submit"]:hover{
+    background-color: #FBC6B1;
+} 
+
+.registerform .formlabel{
+    font-family: verdana;
+    font-size:13px;
+
+}
+
+#form .registerform .errormessage{
+    color:red;
+    display:block;
+    float:left;
+    /*margin:10px;
+    height:30px;*/
 }
 
 
