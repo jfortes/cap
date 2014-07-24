@@ -317,6 +317,9 @@ body{
 
 }
 
+/*------------------register------------------------*/
+
+
 #containerregister{
     width: 960px;
     background-color: #fff;
@@ -324,7 +327,7 @@ body{
     background size: cover;
     margin: auto;
     height: 990px;
-    outline: 1px red solid;
+  /*  outline: 1px red solid;*/
 }
 
 #registerfooter{
@@ -372,7 +375,7 @@ body{
     display:block;
 }
 
-.registerform .formlabel {
+.registerform .formlabel{
     width:100px;
     float:left;
     text-align:right;
@@ -410,12 +413,156 @@ body{
 
 }
 
+/*#form .registerform */
+
 #form .registerform .errormessage{
+    color:red;
+    display:block;
+    float:right;
+    margin-right: 300px;
+    font-family: verdana;
+   /* height:30px;*/
+}
+
+#mainlogin{
+    width: 960px;
+    margin-top: 150px;
+  /*  outline: 1px red solid;*/
+}
+
+.registerlogin{
+    width: 800px;
+    margin: auto;
+    clear: both;
+}
+
+#mainlogin .registerlogin h3{
+    width: 100px;
+    display: block;
+    text-align: left;
+    padding-bottom:5px;
+   /* border-bottom: 1px solid #575036;*/
+   /* margin:40px auto 40px auto;*/
+    margin-bottom: 10px;
+    font-family: verdana;
+    color: #d3af8e;
+    font-size: 14px;
+    border-bottom: 1px solid #696969;
+
+}
+
+.formlogin{
+    width: 250px;
+    margin:10px;
+    color: #000;
+    display:block;
+}
+
+.registerlogin .formlabel{
+    width:100px;
+    float:left;
+    text-align:right;
+    padding-right: 20px;
+}
+
+.registerlogin form input[type="submit"]{
+    float: left;
+    margin-left: 350px;
+    margin-top: 10px;
+}
+
+#mainlogin form input[type="submit"]{
+    color: #696969;
+    display:block;
+    width: 90px;
+}
+
+.registerlogin form input[type="submit"]:hover{
+    background-color: #FBC6B1;
+} 
+
+.registerlogin .formlabel{
+    font-family: verdana;
+    font-size:13px;
+
+}
+
+#mainlogin .registerlogin .errormessage{
     color:red;
     display:block;
     float:left;
     /*margin:10px;
     height:30px;*/
 }
+
+/*------------------------cart---------------------------*/
+
+#productcart{
+    width: 100%;
+    margin-top: 630px;
+}
+
+#productcart ul li{
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 0 0 10px;
+    list-style: none;
+
+}
+
+.cartlist h2{
+    font-family: verdana;
+    font-style: normal;
+    font-size: 14px;
+    color: #d3af8e;
+}
+
+.cartlist img{
+    display:block;
+    width: 300px;
+    height: 350px;
+}
+
+.cartlist p{
+    display: block;
+    float: right;
+    margin: -260px 70px 30px 0;
+    font-style: verdana;
+    font-size: 14px;
+}
+
+.cartlist h3{
+    display: block;
+    float: right;
+    margin: -200px 70px 0 0;
+    font-style: verdana;
+    font-size: 18px;
+}
+
+.cartlist a{
+    display: block;
+    float: right;
+    margin: -150px 70px 0 0;
+}
+
+#footercontentdetail p{
+    font-size: 13px;
+    font-family: verdana;
+    margin: 20px 0 0 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -50,6 +50,25 @@ require_once("connection.php");
 
 	public function save(){
 
+		$oConnection = new Connection();
+
+			$sSQL = "INSERT INTO  tbproduct (ProductName, Description, Price, TypeID, PhotoPath)
+					VALUES ( '".$oConnection->escape_value($this->sProductName)."',  
+						'".$oConnection->escape_value($this->sDescription)."',  
+						'".$oConnection->escape_value($this->iCost)."', 
+						'".$oConnection->escape_value($this->iTypeID)."',   
+						'".$oConnection->escape_value($this->sPhotoPath)."')";
+	
+			$bResult = $oConnection->query($sSQL);
+
+			if($bResult == true) {
+				$this->iProductID = $oConnection->get_insert_id();
+			} else {
+				die($sSQL . "is not a valid query");
+			}
+
+			$oConnection->close_connection();
+
 	}
 
 	public function __get($var){

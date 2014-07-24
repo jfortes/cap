@@ -29,7 +29,7 @@
 	<div id="form">
 		<div class="registerform">
 			
-			<h3>Join Cap</h3>
+			<h3>Edit Membership</h3>
 		
 			<form action="" method="post">
 			

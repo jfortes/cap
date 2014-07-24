@@ -17,8 +17,8 @@ class view{
 
 		}
 
-		$sHTML.='<li id="login"><a href="login.html">login</a></li>';
-		$sHTML.='<li id="register"><a href="register.html">register</a></li>';
+		$sHTML.='<li id="login"><a href="log_in.php">login</a></li>';
+		$sHTML.='<li id="register"><a href="registration.php">register</a></li>';
 
 		$sHTML.='</ul>';
 		$sHTML.='</nav>';

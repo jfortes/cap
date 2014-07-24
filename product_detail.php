@@ -57,22 +57,22 @@
 	</section>
 	<!-- <section>
 			<li id="summer"><a href="">summer collection</a></li>
-			<li id="fall"><a href="">fall collection</a></li> -->
-		<!-- <div id="summer"><a href="">summer collection</a></div>
+			<li id="fall"><a href="">fall collection</a></li>
+		<div id="summer"><a href="">summer collection</a></div>
 		<div id="fall"><a href="">fall collection</a></div> -->
-	</section>
-	<section id="product">
+	</section> 
+	<section id="productcart">
 		<ul>
 			<li>
-				<div class="productone">
+				<div class="cartlist">
 				<h2>Cap Signature Baseball Cap</h2>
 				<img src="assets/images/1-summer.jpg" alt="Cap Signature Baseball Cap">
 				<p>Beige/blue diamante nylon with brown leather trim with adjustable leather hook-and-loop closure</p>
-				<h3>NZD$109</h3>
+				<h3>$000.00</h3>
 				<a href="">Add to Cart</a>
 				</div>
 			</li>
-			<li>
+			<!-- <li>
 				<div class="producttwo">
 				<h2>Black Leather Baseball Hat</h2>
 				<img src="assets/images/2-summer.jpg" alt="Black Leather Baseball Hat">
@@ -135,10 +135,10 @@
 				<a href="">Add to Cart</a>
 				</div>
 			</li>
-		</ul>
+		</ul> -->
 	</section>
 	<footer>
-		<div id="footercontent">
+		<div id="footercontentdetail">
 			<p>© 2014 Cap Ltd. All Rights Reserved. Powered by Insignia Ltd</p>
 		</div>
 	</footer>

@@ -7,7 +7,7 @@
 </head>
 <body>
 
-	<div id="containerregister">
+<div id="containerregister">
 	<header>
 		<div id="facebook"><a href=""><img src="assets/images/facebook.png" alt=""></a></div>
 		<div id="twitter"><a href=""><img src="assets/images/twitter.png" alt=""></a></div>
@@ -26,27 +26,7 @@
 		</ul>
 	</nav>
 
-	<div id="mainlogin">
-		<div class="registerlogin">
+	<div id="form">
+		<div class="registerform">
 			
-			<h3>Log In</h3>
-
-			<form action="" method="post">
-
-				<span class="errormessage"></span>
-				<label for="username" class="formlabel">*Username</label>
-				<input type="text" id="username" name="username" value="" class="forminput">
-
-				<span class="errormessage"></span>
-				<label for="password" class="formlabel">*Password</label>
-				<input type="text" id="password" name="password" value="" class="forminput">
-
-				<input type="submit" name="submit" value="Register" class="forminput"/>
-			</form>
-
-		</div>
-
-	</div>
-	
-</body>
-</html>
+			<h3>Edit Membership</h3>
