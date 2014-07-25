@@ -8,10 +8,15 @@ require_once("includes/model_cart.php");
 
 session_start();
 
+$sContainerID = "container";
+require_once ("includes/header.php");
+
 		if(isset($_SESSION["CustomerID"])) {
 
 			$oCustomer = new Customer();
 			$oCustomer->load($_SESSION["CustomerID"]);
+
+			echo "<p>Hi ".$oCustomer->FirstName.", you are already logged in. You must log out before you can log in another account</p>";
 
 		} else {
 			$oForm = new Form();
@@ -20,8 +25,8 @@ session_start();
 
 				$oForm->data = $_POST; 
 
-				$oForm->checkRequired("Username"); 
-				$oForm->checkRequired("Password"); 
+				$oForm->checkFilled("Username"); 
+				$oForm->checkFilled("Password"); 
 
 				if($oForm->isValid == true) { 
 
@@ -49,7 +54,7 @@ session_start();
 						$_SESSION["Cart"] = $oCart;
 						// print_r($_SESSION["Cart"]);
 
-						header("Location:success_page.php"); 
+						header("Location:listCategory.php"); 
 						exit;
 
 					}
@@ -58,9 +63,9 @@ session_start();
 
 			}
 
-			$oForm->makeInputText("Username", "username");
-			$oForm->makeInputText("Password","password");
-			$oForm->makeSubmitButton("Login", "submit");
+			$oForm->makeInputText("*Username", "username");
+			$oForm->makeInputText("*Password","password");
+			$oForm->makeSubmit("Register", "submit");
 
 			echo $oForm->html;
 
@@ -68,5 +73,6 @@ session_start();
 
 // print_r($_SESSION);
 
+require_once("includes/footer.php"); 
 
 ?>

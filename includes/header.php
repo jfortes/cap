@@ -1,10 +1,3 @@
-<?php
-
-require_once("view.php");
-
-?>
-
-
 <!doctype html>
 <html lang="en">
 <head>

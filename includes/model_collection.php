@@ -2,6 +2,7 @@
 
 require_once ("connection.php");
 require_once ("model_category.php");
+require_once ("model_customer.php");
 
 class collection{
 
@@ -26,6 +27,31 @@ class collection{
 		$oConnection->close_connection(); 
 
 		return $aCategories;
+
+	}
+
+	public function findCustomerByUsername($sUserName){
+
+		$oConnection = new Connection();
+
+		$sSQL = "SELECT CustomerID
+		FROM tbcustomer
+		WHERE Username = '".$oConnection->escape_value($sUserName)."'";
+
+		$oResult = $oConnection->query($sSQL);
+		$aCustomer->$oConnection->fetch_array($oResult);
+		$oConnection->close_connection();
+
+		if($aCustomer != false){
+
+			$oCustomer = new Customer();
+			load($aCustomer["CustomerID"]);
+			return $oCustomer;
+
+		}else{
+
+			return false;
+		}
 
 	}
 

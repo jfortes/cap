@@ -57,6 +57,10 @@ class category{
 		$oConnection->close_connection();
 	}
 
+	public function save() {
+
+		}
+
 	public function __get($var){
 		switch($var){
 			case "TypeID";
