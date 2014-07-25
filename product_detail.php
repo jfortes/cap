@@ -1,3 +1,33 @@
+<?php
+
+require_once("includes/view.php");
+require_once("includes/view_form.php");
+require_once("includes/model_collection.php");
+require_once("includes/model_category.php");
+require_once("includes/model_cart.php");
+
+
+$oView = new View();
+$oCollection = new Collection();
+$oCollection->getAllCategories();
+
+// still need product detail header
+
+session_start();
+
+
+
+
+?>
+
+
+
+
+
+
+
+
+
 <!doctype html>
 <html lang="en">
 <head>

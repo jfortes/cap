@@ -53,6 +53,32 @@ class view{
 		return $sHTML; 
 	}
 
+
+	public function renderProduct($oProduct){
+
+		$sHTML = '<div class="productone">';
+		$sHTML .='<h2>'.$oProduct->ProductName.'</h2>';
+		$sHTML .='<img src="assets/images/'.$oProduct->PhotoPath.'" alt="'.$oProduct->ProductName.'">';
+		$sHTML .='<p>'.$oProduct->Description.'</p>';
+		$sHTML .='<h3>NZD$'.$oProduct->Cost.'109</h3>';
+		$sHTML .='<a href="">Add to Cart</a>';
+		$sHTML .='</div>';
+
+		return $sHTML; 
+	}
+
+	public function renderCustomerDetails(){
+
+	}
+
+	public function renderShoppingCart(){
+		
+	}
+
+
+
+
+
 }
 
 
