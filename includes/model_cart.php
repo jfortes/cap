@@ -27,7 +27,7 @@
 
 			$this->aContents[$iProductID] -= 1;
 
-			if($this->aContents[$iProductID]) <= 0) {
+			if($this->aContents[$iProductID]) = 1) {
 
 				unset($this->aContents[$iProductID]);
 			}

@@ -500,6 +500,7 @@ body{
 #productcart{
     width: 100%;
     margin-top: 630px;
+    color: #d3af8e;
 }
 
 #productcart ul li{
@@ -531,7 +532,7 @@ body{
     font-size: 14px;
 }
 
-.cartlist h3{
+.cartlist #totalcost{
     display: block;
     float: right;
     margin: -200px 70px 0 0;
@@ -539,10 +540,11 @@ body{
     font-size: 18px;
 }
 
+
 .cartlist a{
     display: block;
     float: right;
-    margin: -150px 70px 0 0;
+    margin: 150px 70px 0 0;
 }
 
 #footercontentdetail p{
@@ -550,6 +552,13 @@ body{
     font-family: verdana;
     margin: 20px 0 0 10px;
 
+}
+
+#quantitycart{
+    display: block;
+    float: right;
+    outline: 1px red solid;
+    margin: 5px 20px 0 0;
 }
 
 
