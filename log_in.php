@@ -1,15 +1,23 @@
 <?php
 
-require_once("includes/header.php"); 
+require_once ("includes/view.php");
 require_once("includes/view_form.php");
 require_once("includes/model_collection.php");
 require_once("includes/model_cart.php"); 
 
-
 session_start();
+
+$oView = new View();
+$oCollection = new collection();
+$aAllCategories = $oCollection->getAllCategories();
+
 
 $sContainerID = "container";
 require_once ("includes/header.php");
+$sFormHTML = "";
+
+
+
 
 		if(isset($_SESSION["CustomerID"])) {
 
@@ -63,15 +71,32 @@ require_once ("includes/header.php");
 
 			}
 
-			$oForm->makeInputText("*Username", "username");
-			$oForm->makeInputText("*Password","password");
+			$oForm->makeTextInput("*Username", "username");
+			$oForm->makeTextInput("*Password","password");
 			$oForm->makeSubmit("Register", "submit");
 
-			echo $oForm->html;
+			$sFormHTML = $oForm->html;
 
 		}
 
 // print_r($_SESSION);
+
+
+?>
+
+<div id="mainlogin">
+		<div class="registerlogin">
+			
+			<h3>Log In</h3>
+
+			<?php echo $sFormHTML;?>
+
+		</div>
+
+	</div>
+
+
+<?php		
 
 require_once("includes/footer.php"); 
 

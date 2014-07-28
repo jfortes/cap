@@ -27,7 +27,7 @@
 
 			$this->aContents[$iProductID] -= 1;
 
-			if($this->aContents[$iProductID]) = 1) {
+			if($this->aContents[$iProductID] <= 0) {
 
 				unset($this->aContents[$iProductID]);
 			}
@@ -65,12 +65,12 @@
 
 // test
 
-$oCart = new Cart();
-$oCart->addtoCart(3); 
+// $oCart = new Cart();
+// $oCart->addtoCart(3); 
 
-echo"<pre>";
-print_r($oCart);
-echo"</pre>";
+// echo"<pre>";
+// print_r($oCart);
+// echo"</pre>";
 
 
 

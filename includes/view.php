@@ -43,7 +43,7 @@ class view{
 			$sHTML.='<img src="assets/images/'.$oProduct->PhotoPath.'" alt="'.$oProduct->ProductName.'">';
 			$sHTML.='<p>'.$oProduct->Description.'</p>';
 			$sHTML.='<h3>NZD$'.$oProduct->Price.'</h3>';
-			$sHTML.='<a href="">Add to Cart</a>';
+			$sHTML.='<a href="product_detail.php?productID='.$oProduct->ProductID.'">Add to Cart</a>';
 			$sHTML.='</div>';
 			$sHTML.='</li>';
 		}
