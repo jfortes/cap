@@ -651,10 +651,14 @@ body{
 }
 
 #hello{
-    width: 500px;
-    display:block;
+    width: 700px;
+    display: block;
     float: left;
-    margin: 50px 300px 0 20px;
+    margin-top: 200px;
+    margin-left: 380px;
+    font-style: verdana;
+    font-size: 15px;
+
 }
 
 #editprofile{
@@ -690,7 +694,14 @@ body{
 
 }
 
-
+#editError{
+    width: 600px;
+    display: block;
+    margin-top: 200px;
+    margin-left: 320px;
+    font-style: verdana;
+    font-size: 15px;
+}
 
 
 

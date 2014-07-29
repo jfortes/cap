@@ -21,7 +21,7 @@ $sFormHTML = "";
 			$oCustomer = new Customer();
 			$oCustomer->load($_SESSION["CustomerID"]);
 
-			echo "<p id='hello'>Hi ".$oCustomer->FirstName.", you are already logged in. You must log out before you can log in another account</p>";
+			echo "<p id='hello'>Hi ".$oCustomer->FirstName.", you are already logged in.</p>";
 
 		} else {
 			$oForm = new Form();
@@ -84,7 +84,7 @@ $sFormHTML = "";
 <div id="mainlogin">
 		<div class="registerlogin">
 			
-			<h3>Log In</h3>
+		<!-- 	<h3>Log In</h3> -->
 
 			<?php echo $sFormHTML;?>
 
@@ -95,6 +95,6 @@ $sFormHTML = "";
 
 <?php		
 
-require_once("includes/footer.php"); 
+// require_once("includes/footer.php"); 
 
 ?>

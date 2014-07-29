@@ -1,13 +1,13 @@
 <?php
 
-
+// require_once("includes/view.php");
 require_once("includes/view_form.php");
 require_once("includes/model_customer.php");
 
+session_start();
+
 $sContainerID = "container";
 require_once ("includes/header.php");
-
-session_start();
 
 $oForm = new Form();
 
@@ -30,10 +30,24 @@ if(isset($_POST["submit"])){
 	$oForm->data = $_POST;
 
 	$oForm->checkFilled("first_name");
-	$oForm->checkFilled("first_name");
-	$oForm->checkFilled("first_name");
-	$oForm->checkFilled("first_name");
-	$oForm->checkFilled("first_name");
+	$oForm->checkFilled("last_name");
+	$oForm->checkFilled("address");
+	$oForm->checkFilled("telephone");
+	$oForm->checkFilled("email");
+
+	if($oForm->isValid){
+
+		$oCustomer->FirstName = $_POST["first_name"];
+		$oCustomer->LastName = $_POST["last_name"];
+		$oCustomer->Address = $_POST["address"];
+		$oCustomer->Telephone = $_POST["telephone"];
+		$oCustomer->Email = $_POST["email"];
+
+		$oCustomer->save();
+
+		header("Location:listCategory.php");
+		exit;
+	}
 }
 
 $oForm->makeTextInput("*First Name","first_name");
@@ -41,6 +55,7 @@ $oForm->makeTextInput("*Last Name","last_name");
 $oForm->makeTextInput("*Address","address");
 $oForm->makeTextInput("*Telephone","telephone");
 $oForm->makeTextInput("*Email","email");
+$oForm->makeSubmit("Edit","submit"); 
 
 echo $oForm->html;
 

@@ -67,7 +67,23 @@ class view{
 		return $sHTML; 
 	}
 
-	public function renderCustomerDetails(){
+	public function renderCustomerDetails($oCustomer){
+
+		$sHTML = '';
+		$sHTML .='<ul id="profilelist">';
+		$sHTML .='<h3>User Profile</h3>';
+
+		$sHTML .='<li>First Name:'.$oCustomer->FirstName.'</li>';
+		$sHTML .='<li>Last Name:'.$oCustomer->LastName.'</li>';
+		$sHTML .='<li>Address:'.$oCustomer->Address.'</li>';
+		$sHTML .='<li>Telephone:'.$oCustomer->Telephone.'</li>';
+		$sHTML .='<li>Email:'.$oCustomer->Email.'</li>';
+		$sHTML .='</ul>';
+		$sHTML .='<ul id="editprofile">';
+		$sHTML .='<li><a href="edit.php">Edit</a></li>';
+		$sHTML .='</ul>';
+
+		return $sHTML; 
 
 	}
 

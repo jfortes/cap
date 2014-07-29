@@ -3,13 +3,16 @@
 require_once ("includes/model_collection.php");
 require_once ("includes/view.php");
 require_once ("includes/view_form.php");
+require_once("includes/model_customer.php");
 
-
+$oView = new View();
 $oCollection = new collection();
 $aAllCategories = $oCollection->getAllCategories();
 
-$oView = new view();
+$sContainerID = "container";
+require_once("includes/header.php");
 
+session_start();
 
 $oForm = new Form();
 
@@ -27,24 +30,35 @@ if(isset($_POST["submit"])){
 		$oForm->checkFilled("password");
 		$oForm->checkMatch("password", "confirm_password");
 
+	if($oForm->isValid == true){
 
-	if($oForm->isValid){
+		$oCollection = new Collection();
+		$oCollection->findCustomerByUserName($_POST["Username"]);
 
-		$oCustomer = new Customer();
+		if($oCustomer != false){
+			$oForm->makeErrorMessage("Username","Username is taken");
+		}
 
-		$oCustomer->firstname= $_POST["first_Name"];
-		$oCustomer->lastname= $_POST["last_Name"];
-		$oCustomer->address= $_POST["address"];
-		$oCustomer->telephone= $_POST["telephone"];
-		$oCustomer->email= $_POST["email"];
-		$oCustomer->username= $_POST["username"];
-		$oCustomer->password= $_POST["password"];
+	
+		if($oForm->isValid == true){
 
-		$oCustomer->save();
+			$oCustomer = new Customer();
 
-		header ("location:listCategory.php");
-		exit;
+			$oCustomer->firstname= $_POST["first_Name"];
+			$oCustomer->lastname= $_POST["last_Name"];
+			$oCustomer->address= $_POST["address"];
+			$oCustomer->telephone= $_POST["telephone"];
+			$oCustomer->email= $_POST["email"];
+			$oCustomer->username= $_POST["username"];
+			$oCustomer->password= $_POST["password"];
 
+			$oCustomer->save();
+
+			header ("location:listCategory.php");
+			
+			// exit;
+
+		}
 	}
 
 }
@@ -109,11 +123,11 @@ require_once ("includes/header.php");
 		
 	
 
-	<footer>
+	<!-- <footer>
 		<div id="registerfooter">
 			<p>© 2014 Cap Ltd. All Rights Reserved. Powered by Insignia Ltd</p>
 		</div>
-	</footer>
+	</footer> -->
 </div>
 	
 </body>

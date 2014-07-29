@@ -41,6 +41,6 @@ require_once("includes/header.php");
 		echo "<p id='editError'>You must login before you can view your profile</p>";
 	}
 
-require_once("includes/footer.php");	
+// require_once("includes/footer.php");	
 
 ?>
