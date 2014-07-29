@@ -11,20 +11,17 @@ $oView = new View();
 $oCollection = new collection();
 $aAllCategories = $oCollection->getAllCategories();
 
-
 $sContainerID = "container";
 require_once ("includes/header.php");
+
 $sFormHTML = "";
-
-
-
 
 		if(isset($_SESSION["CustomerID"])) {
 
 			$oCustomer = new Customer();
 			$oCustomer->load($_SESSION["CustomerID"]);
 
-			echo "<p>Hi ".$oCustomer->FirstName.", you are already logged in. You must log out before you can log in another account</p>";
+			echo "<p id='hello'>Hi ".$oCustomer->FirstName.", you are already logged in. You must log out before you can log in another account</p>";
 
 		} else {
 			$oForm = new Form();
@@ -33,27 +30,27 @@ $sFormHTML = "";
 
 				$oForm->data = $_POST; 
 
-				$oForm->checkFilled("Username"); 
-				$oForm->checkFilled("Password"); 
+				$oForm->checkFilled("username"); 
+				$oForm->checkFilled("password"); 
 
 				if($oForm->isValid == true) { 
 
 					$oCollection = new Collection();
-					$sCustomerUsername = $_POST["Username"]; 
+					$sCustomerUsername = $_POST["username"]; 
 					$oCustomer = $oCollection->findCustomerByUsername($sCustomerUsername); 
 
 
 					if($oCustomer == false) { 
 
-						$oForm->makeErrorMessage("Username","Username does not exist");
+						$oForm->makeErrorMessage("username","Username does not exist");
 
-					} elseif($_POST["password"] !== $oCustomer->password) { 
+					} elseif($_POST["password"] !== $oCustomer->Password) { 
 
-							$oForm->makeErrorMessage("Password","Password does not match username"); 
+							$oForm->makeErrorMessage("username","Password does not match username"); 
 
 					} else {
 
-						$iCustomerID = $oCustomer->customerid; 
+						$iCustomerID = $oCustomer->CustomerID; 
 
 						$_SESSION["CustomerID"] = $iCustomerID;
 

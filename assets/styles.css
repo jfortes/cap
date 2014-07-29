@@ -113,7 +113,7 @@ body{
 
 #container{
 	width: 960px;
-/*	height: 1300px;*/
+	height: 1550px;
 	background-color: #FFF;
 	position: relative;
 	margin: auto;
@@ -298,7 +298,7 @@ body{
     float: left;
     margin-left: 10px;
   /*  outline: 1px red solid;*/
-    margin-top: -25px;
+    margin-top: 5px;
 }
 
 #facebook, #twitter, #google{
@@ -616,12 +616,79 @@ body{
     float: left;
 }
 
+#profilelist{
+    width: 100%;
+    margin: auto;
+}
 
+#profilelist li{
+    width: 960px;
+    display: block;
+    float: left;
+    text-decoration: none;
+    margin-left: 80px;
+    font-family: verdana;
+    font-size: 14px;
+    margin-bottom: 10px;
 
+}
 
+#profilelist h3{
+    width: 100px;
+    display: block;
+    text-align: left;
+    padding-bottom:5px;
+   /* border-bottom: 1px solid #575036;*/
+/*    margin:0px auto 40px auto;*/
+    margin-bottom: 10px;
+    font-family: verdana;
+    color: #d3af8e;
+    font-size: 14px;
+    border-bottom: 1px solid #696969;
+    margin-top: 150px;
+    margin-left: 30px;
+    
+}
 
+#hello{
+    width: 500px;
+    display:block;
+    float: left;
+    margin: 50px 300px 0 20px;
+}
 
+#editprofile{
+   width: 100%;
+   margin: auto;
+}
 
+#editprofile li{
+    width: 960px;
+    display: block;
+    float: left;
+    text-decoration: none;
+    margin-left: 80px;
+    font-family: verdana;
+    font-size: 14px;
+    margin-bottom: 10px;
+
+}
+
+#editprofile a{
+    text-decoration: none;
+    display: block;
+    float: left;
+    height: 30px;
+    color: #362819;
+    line-height: 30px;
+    background-color: #D3AF8E;
+    margin-left: 200px;
+    width: 50px;
+    padding-left: 20px;
+    font-style: verdana;
+    font-size: 13px;
+
+}
 
 
 

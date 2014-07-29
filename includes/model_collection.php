@@ -39,13 +39,13 @@ class collection{
 		WHERE Username = '".$oConnection->escape_value($sUserName)."'";
 
 		$oResult = $oConnection->query($sSQL);
-		$aCustomer->$oConnection->fetch_array($oResult);
+		$aCustomer = $oConnection->fetch_array($oResult);
 		$oConnection->close_connection();
 
 		if($aCustomer != false){
 
 			$oCustomer = new Customer();
-			load($aCustomer["CustomerID"]);
+			$oCustomer->load($aCustomer["CustomerID"]);
 			return $oCustomer;
 
 		}else{

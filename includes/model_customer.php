@@ -112,8 +112,32 @@ class Customer{
 	public function __get($var){
 
 		switch($var) {
+			case "html":
+				return $this->sHTML."</form>";
+				break;
 			case "CustomerID":
 				return $this->iCustomerID;
+				break;
+			case "FirstName":
+				return $this->sFirstName;
+				break;
+			case "LastName":
+				return $this->sLastName;
+				break;
+			case "Address":
+				return $this->sAddress;
+				break;
+			case "Telephone":
+				return $this->sTelephone;
+				break;
+			case "Email":
+				return $this->sEmail;
+				break;
+			case "Username":
+				return $this->sUserName;
+				break;
+			case "Password":
+				return $this->sPassword;
 				break;
 			default:
 				 die($var . "does not exist in customer");
@@ -155,17 +179,17 @@ class Customer{
 
 //Test
 
-$oCustomer = new Customer();
+// $oCustomer = new Customer();
 
-$oCustomer->FirstName = "Test";
-$oCustomer->LastName = "Test";
-$oCustomer->Address = "Test";
-$oCustomer->Telephone = "Test";
-$oCustomer->Email = "Test";
-$oCustomer->UserName = "Test";
-$oCustomer->Password = "Test";
+// $oCustomer->FirstName = "Test";
+// $oCustomer->LastName = "Test";
+// $oCustomer->Address = "Test";
+// $oCustomer->Telephone = "Test";
+// $oCustomer->Email = "Test";
+// $oCustomer->UserName = "Test";
+// $oCustomer->Password = "Test";
 
-$oCustomer->save();
+// $oCustomer->save();
 
 
 ?>
