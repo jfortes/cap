@@ -143,11 +143,11 @@ require_once ("includes/header.php");
 			</li>
 		</ul> -->
 	</section>
-	<footer>
+<!-- 	<footer>
 		<div id="footercontentdetail">
 			<p>© 2014 Cap Ltd. All Rights Reserved. Powered by Insignia Ltd</p>
 		</div>
-	</footer>
+	</footer> -->
 </div>
 	
  <script type="text/javascript">

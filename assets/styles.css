@@ -655,7 +655,7 @@ body{
     display: block;
     float: left;
     margin-top: 200px;
-    margin-left: 380px;
+    margin-left: 375px;
     font-style: verdana;
     font-size: 15px;
 
@@ -702,6 +702,45 @@ body{
     font-style: verdana;
     font-size: 15px;
 }
+
+#log{
+    width: 100%;
+    display:block;
+    margin-top: 200px;
+    margin-left: 410px;
+}
+
+#log a{
+    text-decoration: none;
+    font-style: verdana;
+    font-size: 18px;
+    width: 80px;
+    height: 30px;
+    color: #362819;
+    line-height: 30px;
+    display: block;
+    background-color: #D3AF8E;
+    padding-left: 25px;
+
+}
+
+#showprofile a{
+    width: 200px;
+    height: 40px;
+    font-style: verdana;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    line-height: 30px;
+    margin-top: 280px;
+    margin-left: 410px;
+    color: #D3AF8E;
+  /*  outline: 1px red solid;*/
+
+    
+
+}
+
 
 
 

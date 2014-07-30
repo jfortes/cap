@@ -14,6 +14,7 @@ $aAllCategories = $oCollection->getAllCategories();
 $sContainerID = "container";
 require_once ("includes/header.php");
 
+
 $sFormHTML = "";
 
 		if(isset($_SESSION["CustomerID"])) {
@@ -21,7 +22,10 @@ $sFormHTML = "";
 			$oCustomer = new Customer();
 			$oCustomer->load($_SESSION["CustomerID"]);
 
-			echo "<p id='hello'>Hi ".$oCustomer->FirstName.", you are already logged in.</p>";
+			echo "<p id='hello'>Hi ".$oCustomer->FirstName.", you are already logged in.";
+			echo "<p id='showprofile'><a href='profile.php'>View Customer Profile</a>";
+			echo "<p id='log'><a href='log_out.php'>Log Out</a></p>";
+	
 
 		} else {
 			$oForm = new Form();
@@ -70,7 +74,7 @@ $sFormHTML = "";
 
 			$oForm->makeTextInput("*Username", "username");
 			$oForm->makeTextInput("*Password","password");
-			$oForm->makeSubmit("Register", "submit");
+			$oForm->makeSubmit("Log In", "submit");
 
 			$sFormHTML = $oForm->html;
 

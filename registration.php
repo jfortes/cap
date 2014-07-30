@@ -9,8 +9,8 @@ $oView = new View();
 $oCollection = new collection();
 $aAllCategories = $oCollection->getAllCategories();
 
-$sContainerID = "container";
-require_once("includes/header.php");
+// $sContainerID = "container";
+// require_once("includes/header.php");
 
 session_start();
 
@@ -28,35 +28,35 @@ if(isset($_POST["submit"])){
 		$oForm->checkFilled("email");
 		$oForm->checkFilled("username");
 		$oForm->checkFilled("password");
-		$oForm->checkMatch("password", "confirm_password");
+		
 
 	if($oForm->isValid == true){
 
 		$oCollection = new Collection();
-		$oCollection->findCustomerByUserName($_POST["Username"]);
+		$oTestCustomer = $oCollection->findCustomerByUserName($_POST["username"]);
 
-		if($oCustomer != false){
-			$oForm->makeErrorMessage("Username","Username is taken");
+		if($oTestCustomer != false){
+			$oForm->makeErrorMessage("username","Username is taken");
 		}
 
-	
+		
 		if($oForm->isValid == true){
 
 			$oCustomer = new Customer();
 
-			$oCustomer->firstname= $_POST["first_Name"];
-			$oCustomer->lastname= $_POST["last_Name"];
-			$oCustomer->address= $_POST["address"];
-			$oCustomer->telephone= $_POST["telephone"];
-			$oCustomer->email= $_POST["email"];
-			$oCustomer->username= $_POST["username"];
-			$oCustomer->password= $_POST["password"];
+			$oCustomer->FirstName= $_POST["first_name"];
+			$oCustomer->LastName= $_POST["last_name"];
+			$oCustomer->Address= $_POST["address"];
+			$oCustomer->Telephone= $_POST["telephone"];
+			$oCustomer->Email= $_POST["email"];
+			$oCustomer->UserName= $_POST["username"];
+			$oCustomer->Password= $_POST["password"];
 
 			$oCustomer->save();
 
 			header ("location:listCategory.php");
 			
-			// exit;
+			exit;
 
 		}
 	}
@@ -70,7 +70,8 @@ $oForm->makeTextInput("*Telephone","telephone");
 $oForm->makeTextInput("*Email","email");
 $oForm->makeTextInput("*Username","username");
 $oForm->makeTextInput("*Password","password");
-$oForm->makeSubmit("Register","submit");
+// $oForm->makeSubmit("Log In","submit");
+$oForm->makeSubmit("Register", "submit");
 
 $sContainerID = "containerregister";
 require_once ("includes/header.php");

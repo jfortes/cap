@@ -1,10 +1,20 @@
 <?php
 
-// require_once("includes/view.php");
-require_once("includes/view_form.php");
+require_once ("includes/model_collection.php");
+require_once ("includes/view.php");
+require_once ("includes/view_form.php");
 require_once("includes/model_customer.php");
 
 session_start();
+
+if(isset($_SESSION["CustomerID"]) == false){
+	header("Location:log_in.php");
+	exit;
+}
+
+$oView = new View();
+$oCollection = new collection();
+$aAllCategories = $oCollection->getAllCategories();
 
 $sContainerID = "container";
 require_once ("includes/header.php");
@@ -59,6 +69,6 @@ $oForm->makeSubmit("Edit","submit");
 
 echo $oForm->html;
 
-require_once("includes/footer.php");
+// require_once("includes/footer.php");
 
 ?>

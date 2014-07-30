@@ -74,6 +74,11 @@
 
 		}
 
+	public function makeErrorMessage($sControlName, $sMessage){
+
+			$this->aErrors[$sControlName] = $sMessage;
+
+		}
 
 	public function __get($var){
 
@@ -92,6 +97,36 @@
 			 		die("fails");
 
 					}
+
+	}
+
+	public function checkUpload($sControlName, $sMimeType, $iSize){
+
+	$sErrorMessage = "";
+
+			if(empty($this->aFiles[$sControlName]["name"])) {
+
+				$sErrorMessage = "No files are specified";
+
+			}  elseif($this->aFiles[$sControlName]['error'] != UPLOAD_ERR_OK) {
+
+				$sErrorMessage = "File cannot be uploaded";
+
+			} elseif($this->aFiles[$sControlName]["type"] != $sMimeType) {
+
+				$sErrorMessage = "Only " . $sMimeType . " format can be uploaded";
+
+			} elseif($this->aFiles[$sControlName]["size"] > $iSize) {
+
+				$sErrorMessage = "Files canot exceed " . $iSize . " bytes in size";
+
+			} 
+
+			if($sErrorMessage != "") {
+
+				$this->aErrors[$sControlName] = $sErrorMessage;
+
+			}
 
 	}
 
