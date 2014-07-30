@@ -130,6 +130,36 @@
 
 	}
 
+	public function moveFile($sControlName, $sNewFileName){
+		
+			$newname = dirname(__FILE__).'/../'.$sNewFileName;
+			
+			move_uploaded_file($this->aFiles[$sControlName]['tmp_name'],$newname);
+			
+		}
+
+
+	public function makeHiddenField($sControlName, $sValue) {
+
+			$this->sHTML .= '<input type="hidden" name="$sControlName" value="$sValue"/>';
+
+		}
+
+	public function makeUpLoadBox($sLabelText, $sControlName) {
+
+			$sErrors = "";
+			if(isset($this->aErrors[$sControlName])) {
+				$aErrors = $this->aErrors[$sControlName];
+			}
+
+			$this->sHTML .= '<label for="'.$sControlName.'" class= "formLabel">'.$sLabelText.'</label>';
+			$this->sHTML .= '<input type="file" id="'.$sControlName.'" name="'.$sControlName.'" />';
+			$this->sHTML .= '<span class="errorMessage">'.$sErrors.'</span>';
+
+
+		}
+
+
 	public function __set($var, $value) {
 
 		switch($var) {

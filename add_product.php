@@ -29,8 +29,7 @@ if(isset($_POST["submit"])){
 	$oForm->checkFilled("Description");
 	$oForm->checkFilled("Price");
 	$oForm->checkFilled("TypeID");
-	$oForm->checkFilled("PhotoPath");
-
+	// $oForm->checkFilled("PhotoPath");
 	$oForm->checkUpload("PhotoPath", "image/jpeg", MAX_SIZE);
 
 	if($oForm->isValid){
@@ -38,15 +37,32 @@ if(isset($_POST["submit"])){
 		$sPhotoName = "assets/images/product".date("Y-m-d-H-i-s").".jpg";
 
 		$oProduct = new Product();
+		$oProduct->ProductName = $_POST["ProductName"];
+		$oProduct->Description = $_POST["Description"];
+		$oProduct->Price = $_POST["Price"];
+		$oProduct->TypeID = $_POST["TypeID"];
+		$oProduct->PhotoPath = $sPhotoName;
 
+		$oForm->moveFile("photo", $sPhotoName);
 
+		$oProduct->save();
 
+		header("Location:listCategory.php");
+		exit;
 
 	}
 
-
-
 }
+
+$oForm->makeTextInput("Product Name","ProductName");
+$oForm->makeTextInput("Description","Description");
+$oForm->makeTextInput("Price","Price");
+$oForm->makeTextInput("Collection","TypeID");
+$oForm->makeHiddenField("MAX_FILE_SIZE", MAX_SIZE);
+$oForm->makeUpLoadBox("Photo","photo");
+$oForm->makeSubmit("Submit","submit");
+
+echo $oForm->html;
 
 
 
