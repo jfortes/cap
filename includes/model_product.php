@@ -97,6 +97,31 @@ require_once("connection.php");
 		}
 	}
 
+	public function __set($var, $value){
+
+		switch($var){
+			case "ProductID":
+					$this->iProductID = $value;
+					break;
+			case "ProductName":
+					$this->sProductName = $value;
+					break;
+			case "Description":
+					$this->sDescription = $value;
+					break;
+			case "Price":
+					$this->iCost = $value;
+					break;
+			case "TypeID":
+					$this->iTypeID = $value;
+					break;
+			case "PhotoPath":
+					$this->sPhotoPath = $value;
+					break;
+			default:
+					die($var . "cannot be set in Product");
+		}
+	}
 
 
 	}
@@ -105,7 +130,13 @@ require_once("connection.php");
 
 // $oProduct = new product();
 
-// $oProduct->load(1);
+// $oProduct->ProductName = "Name test";
+// $oProduct->Description = "Description test";
+// $oProduct->Price = 99;
+// $oProduct->TypeID = 1;
+// $oProduct->PhotoPath = "test.jpg";
+// $oProduct->save();
+
 // echo"<pre>";
 // print_r($oProduct);
 // echo "</pre>";

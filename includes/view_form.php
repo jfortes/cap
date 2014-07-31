@@ -5,12 +5,14 @@
 		private $sHTML;
 		private $aData;
 		private $aError;
+		private $aFiles;
 
 		public function __construct(){
 
-			$this->sHTML = '<form action="" method="post">';
+			$this->sHTML = '<form action="" method="post" enctype="multipart/form-data">';
 			$this->aData = array();
 			$this->aError = array(); 
+			$this->aFiles = array();
 		}
 
 
@@ -76,7 +78,7 @@
 
 	public function makeErrorMessage($sControlName, $sMessage){
 
-			$this->aErrors[$sControlName] = $sMessage;
+			$this->aError[$sControlName] = $sMessage;
 
 		}
 
@@ -94,7 +96,7 @@
 					}
 					break;
 				default:
-			 		die("fails");
+			 		die($var . " fails getter");
 
 					}
 
@@ -124,7 +126,7 @@
 
 			if($sErrorMessage != "") {
 
-				$this->aErrors[$sControlName] = $sErrorMessage;
+				$this->aError[$sControlName] = $sErrorMessage;
 
 			}
 
@@ -132,7 +134,7 @@
 
 	public function moveFile($sControlName, $sNewFileName){
 		
-			$newname = dirname(__FILE__).'/../'.$sNewFileName;
+			$newname = dirname(__FILE__).'/../assets/images/'.$sNewFileName;
 			
 			move_uploaded_file($this->aFiles[$sControlName]['tmp_name'],$newname);
 			
@@ -148,8 +150,8 @@
 	public function makeUpLoadBox($sLabelText, $sControlName) {
 
 			$sErrors = "";
-			if(isset($this->aErrors[$sControlName])) {
-				$aErrors = $this->aErrors[$sControlName];
+			if(isset($this->aError[$sControlName])) {
+				$aError = $this->aError[$sControlName];
 			}
 
 			$this->sHTML .= '<label for="'.$sControlName.'" class= "formLabel">'.$sLabelText.'</label>';
@@ -163,15 +165,19 @@
 	public function __set($var, $value) {
 
 		switch($var) {
+
 				case "data":
 					$this->aData=$value;
 					break;
+				case "files":
+					$this->aFiles = $value;
+					break;
 				default:
-			 		die("fails");
+			 		die($var . " fails setter");
 
 
 		}
-			}
+	}
 
 
 }
