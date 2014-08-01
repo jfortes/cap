@@ -50,7 +50,7 @@ if(isset($_POST["submit"])){
 			$oCustomer->Telephone= $_POST["telephone"];
 			$oCustomer->Email= $_POST["email"];
 			$oCustomer->UserName= $_POST["username"];
-			$oCustomer->Password= $_POST["password"];
+			$oCustomer->Password= $oCustomer->encode($_POST["password"]);
 
 			$oCustomer->save();
 

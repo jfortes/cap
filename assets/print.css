@@ -101,49 +101,25 @@ input, select {
     vertical-align:middle;
 }
 
-/*----------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------*/
 
 body{
-	background-image: none;
-	background-size: cover;
-	background-color: #362819;
-	position: relative;
-	background-repeat: no-repeat;
+    background-image: none;
+    background-size: cover;
+    background-color: #FFF;
+    position: relative;
+    background-repeat: no-repeat;
+
 }
 
 #container{
-	width: 960px;
-	height: 1550px;
-	background-color: #FFF;
-	position: relative;
-	margin: auto;
-/*	outline: 1px red solid;*/
+    width: 960px;
+    height: 1550px;
+    background-color: #FFF;
+    position: relative;
+    margin: auto;
 }
-
-#logo{
-    margin-left: 400px;
-    margin-bottom: -80px;
-    padding-top: 25px;
-	/*margin: 30px 40px auto 40px; 
-	outline: 1px red solid; */
-}
-
-/*#summer, #fall{
-    width: 100px;
-    color:#362819;
-    font-family: verdana;
-    float: left;
-    margin: 100px 140px 0 -120px;
-}
-
-#summer a, #fall a{
-    color:#362819;
-    display: inline-block;
-    text-decoration: none;
-    font-size: 14px;
-    font-family: verdana;
-    float: left;
-}*/
 
 #mainNav .cat{
     width: 100px;
@@ -163,11 +139,11 @@ body{
 }
 
 #login, #register{
-	color: #362819;
-	font-family: verdana;
-	text-align: right;
-	float: right;
-	margin: 100px 40px 0 0;
+    color: #362819;
+    font-family: verdana;
+    text-align: right;
+    float: right;
+    margin: 100px 40px 0 0;
     text-decoration: none;
 
 }
@@ -180,35 +156,6 @@ body{
     text-decoration: none;
 
 }
-
-.slide{
-    width: 960px;
-    height:auto;
-    background-color: #333333;
-    position: absolute;
-    margin-top: 150px;
-}
-
-
-/*#summer, #fall{
-    color: #362819;
-    font-family: arial;
-    margin-left: 300px;
-    margin-right: 40px;
-    display: inline-block;
-    float: center;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    outline: 1px red solid;
-}
-
-#summer a, #fall a{
-    text-decoration: none;
-    font-style: normal;
-    margin-left: 20px;
-    font-size: 13px;
-   
-}*/
 
 #product{
     width: 100%;
@@ -510,14 +457,14 @@ body{
     margin: 0 auto;
     padding: 0 0 0 10px;
     list-style: none;
+
 }
 
 .cartlist h2{
-    font-style: verdana;
-    font-weight: bold;
-    font-size: 18px;
+    font-family: verdana;
+    font-style: normal;
+    font-size: 14px;
     color: #d3af8e;
-    margin-left: 360px;
 }
 
 .cartlist img{
@@ -526,7 +473,6 @@ body{
     height: 350px;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 30px;
 }
 
 .cartlist p{
@@ -534,7 +480,7 @@ body{
     float: left;
     margin: -260px 70px 30px 350px;
     font-style: verdana;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .cartlist #totalcost{
@@ -548,7 +494,7 @@ body{
 .cartlist a{
     display: block;
     float: right;
-    margin: 120px 20px 0 0;
+    margin: 150px 20px 0 280px;
     width: 100px;
     height: 30px;
     color: #362819;
@@ -556,7 +502,6 @@ body{
     text-decoration: none;
     background-color: #D3AF8E;
     padding-left: 15px;
-    font-style: verdana;
 
 }
 
@@ -752,7 +697,6 @@ body{
     font-style: verdana;
     font-size: 15px;
 }
-
 
 
 

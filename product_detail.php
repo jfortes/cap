@@ -67,15 +67,15 @@ require_once ("includes/header.php");
 				<p><?php echo $oProduct->Description;?></p>
 
 				<form action="addToCart.php" method="post" id="post" enctype="multipart/form-data">
-					<label class="quantityTitle" for="quantity">Quantity: </label>
-					<input type="number" min= "1" type="number" id="quantity"name="quantity_cart" value="1"/ >
+					<!-- <label class="quantityTitle" for="quantity">Quantity: </label> -->
+<!-- 					<input type="number" min= "1" type="number" id="quantity"name="quantity_cart" value="1"/ > -->
 					<input type="hidden" name="product_id" value="<?php echo $iProductID;?>"/ >
-					<input type="submit" name="submit" value="Add to Cart" class="addcart"/>
+					<!-- <input type="submit" name="submit" value="Add to Cart" class="addcart"/> -->
 				</form>
 					
 				<p id="totalcost">Total Cost: NZD$<?php echo $oProduct->Price;?></h3>
 				
-				<!-- <a href="log_in.php">Add to Cart</a> -->
+				<a href="log_in.php">Add to Cart</a>
 				</div>
 			</li>
 			<!-- <li>
@@ -164,6 +164,7 @@ require_once ("includes/header.php");
         }
         switchPlayPauseClass();
     </script>
+
 
 </body>
 </html>

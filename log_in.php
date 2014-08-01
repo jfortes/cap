@@ -48,7 +48,7 @@ $sFormHTML = "";
 
 						$oForm->makeErrorMessage("username","Username does not exist");
 
-					} elseif($_POST["password"] !== $oCustomer->Password) { 
+					} elseif($oCustomer->encode($_POST["password"]) != $oCustomer->Password) { 
 
 							$oForm->makeErrorMessage("username","Password does not match username"); 
 

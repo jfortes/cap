@@ -26,6 +26,13 @@ class Customer{
 		$this->bExisting = false; 
 	}
 
+	public function encode($sValue){
+		
+		$sEncrypt = md5(sha1(md5($sValue))+sha1($sValue));
+
+		return $sEncrypt;
+	}
+
 	public function load($iID){
 
 		// open
