@@ -51,8 +51,8 @@ if(isset($_POST["submit"])){
 
 		$oProduct->save();
 
-		// header("Location:listCategory.php");
-		// exit;
+		header("Location:listCategory.php");
+		exit;
 
 	}
 

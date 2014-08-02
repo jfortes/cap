@@ -753,7 +753,17 @@ body{
     font-size: 15px;
 }
 
-
+#editcustomer{
+    width: 200px;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 150px;
+    margin-left: 410px;
+    color: #D3AF8E;
+    font-style: verdana;
+    font-size: 15px;
+}
 
 
 

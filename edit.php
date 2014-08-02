@@ -19,6 +19,11 @@ $aAllCategories = $oCollection->getAllCategories();
 $sContainerID = "container";
 require_once ("includes/header.php");
 
+?>
+<h3 id="editcustomer">Edit Customer Details</h3>
+
+<?php
+
 $oForm = new Form();
 
 $iCustomerID = $_SESSION["CustomerID"];
